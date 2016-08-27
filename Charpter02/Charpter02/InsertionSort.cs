@@ -67,5 +67,19 @@ namespace Charpter02
             }
             return -1;
         }
+
+        public static int BinarySearchRecursion(int[] arr, int start, int end, int value)
+        {
+            if (start > end)
+                return -1;
+            int mid = start + (end - start) / 2;
+
+            if (arr[mid] == value)
+                return arr[mid];
+            else if (arr[mid] > value)
+                return BinarySearchRecursion(arr, start, mid - 1, value);
+            else
+                return BinarySearchRecursion(arr, mid + 1, end, value);
+        }
     }
 }

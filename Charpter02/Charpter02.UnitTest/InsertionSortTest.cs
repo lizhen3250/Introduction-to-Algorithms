@@ -38,5 +38,13 @@ namespace Charpter02.UnitTest
             int result = InsertionSort.BinarySearch(arr, 41);
             Assert.AreEqual(result, 41);
         }
+
+        [TestMethod]
+        public void TestMethodBinarySearchRecursion()
+        {
+            int[] arr = { 31, 41, 59, 26, 41, 58 };
+            int result = InsertionSort.BinarySearchRecursion(arr, 0, arr.Length - 1, 41);
+            Assert.AreEqual(result, 41);
+        }
     }
 }
