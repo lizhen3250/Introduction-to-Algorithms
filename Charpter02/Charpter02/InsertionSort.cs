@@ -81,5 +81,34 @@ namespace Charpter02
             else
                 return BinarySearchRecursion(arr, mid + 1, end, value);
         }
+
+        public static int[] SumOfTwoBinaryArray(int[] nums1, int[] nums2)
+        {
+            int[] result = new int[nums1.Length];
+            IsBinaryArrayException(nums1);
+            IsBinaryArrayException(nums2);
+            int flag = 0;
+            for (int i = nums1.Length- 1; i>=0; i--)
+            {
+                result[i] = nums1[i] + nums2[i] + flag;
+                if (result[i] > 1)
+                {
+                    result[i] = result[i] % 2;
+                    flag = 1;
+                }
+                else
+                    flag = 0;
+            }
+            return result;
+        }
+
+        public static void IsBinaryArrayException(int[] arr)
+        {
+            for(int i =0; i<arr.Length; i++)
+            {
+                if (arr[i] > 1)
+                    throw new BinaryArrayException("The element of the first array must be greater than 1");
+            }
+        }
     }
 }

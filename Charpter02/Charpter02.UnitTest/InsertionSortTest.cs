@@ -46,5 +46,14 @@ namespace Charpter02.UnitTest
             int result = InsertionSort.BinarySearchRecursion(arr, 0, arr.Length - 1, 41);
             Assert.AreEqual(result, 41);
         }
+
+        [TestMethod]
+        public void TestTwoSumBinaryArray()
+        {
+            int[] nums1 = { 0,0,1,1};
+            int[] nums2 = { 0,0,1,1};
+            int[] result = InsertionSort.SumOfTwoBinaryArray(nums1, nums2);
+            CollectionAssert.AreEqual(result, new int[] { 0, 1, 1, 0 });
+        }
     }
 }
