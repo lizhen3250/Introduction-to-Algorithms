@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BinaryArrayException.cs" />
     <Compile Include="InsertionSort.cs" />
+    <Compile Include="MergeSortAlgorithm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
