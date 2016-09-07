@@ -46,7 +46,6 @@ namespace Charpter06
                 int temp = nums[0];
                 nums[0] = nums[i];
                 nums[i] = temp;
-                heapSize--;
                 MaxHeapify(nums, 0, i);
             }
         }
